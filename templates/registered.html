@@ -1,0 +1,23 @@
+<html>
+    <head>
+       <title>Registration</title>
+       <meta charset="utf-8"/>
+    </head>
+    <body>
+      <h1><u>registered emails</u></h1>
+      
+      <div id="content">
+    
+    <h1>Email List</h1>
+      {%for e in all_reg%}
+      
+        <p>ID: {{ e['id'] }}</p>
+        <p>email: {{ e['email'] }}</p>
+      <form action='/remove_email/{{e.id}}' method='post'>
+        <input type='submit' value='delete'>
+      </form>
+      {%endfor%}
+    
+      </div>       
+    </body>
+</html>
